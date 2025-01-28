@@ -1,0 +1,78 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Background and Centering */
+  body {
+    background-color: #f4f4f4; /* Background outside the rectangle */
+    display: flex;
+    justify-content: center; /* Center the rectangle horizontally */
+    min-height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Lines Container */
+  .lines-container {
+    position: relative;
+    width: 100%; /* Full width of the page */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align content at the top */
+  }
+  
+  /* Vertical Lines */
+  .lines-container::before,
+  .lines-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Line thickness */
+    background-color: #000; /* Line color */
+  }
+  
+  .lines-container::before {
+    left: calc(50% - 7.5cm); /* Position left line 15 cm apart */
+  }
+  
+  .lines-container::after {
+    right: calc(50% - 7.5cm); /* Position right line 15 cm apart */
+  }
+  
+  /* Content Inside the "Rectangle" */
+  .content {
+    position: relative;
+    max-width: 15cm; /* Matches the space between the lines */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Example: Marquee Styling */
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #f4f4f4;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
