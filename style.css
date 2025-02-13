@@ -298,15 +298,17 @@ header {
     font-family: Rubik, sans-serif;
 }
 
-.movie-poster {
-    display:block;
-    gap: 1.25rem; /* 20px */
-    margin: 1.875rem 0; /* 30px */
-    align-items: center;
+.movie-container {
+    display:inline-block;
+    position: relative;
+    margin-left: 18.75rem;
+    height:20rem;
+    width: 14.15rem;
 }
 
-.movie-poster img{
-    margin-left: 18.75rem;
+.movie-container img{
+    display: block;
+    margin-left: 0rem;
     width:auto;
     height: 20rem;
     border-radius: 0.7rem;
@@ -315,7 +317,40 @@ header {
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
 
-.movie-poster img:hover{
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    border-radius: 0.7rem;
+    border: 3px solid;
+    border-color: #8FB8DE;
+    transition: .5s ease-in-out;
+    pointer-events: none;
+}
+.movie-container:hover .overlay {
+    opacity: 1;
     border-color: #8FB8DE;
 }
 
+.movie-container img:hover{
+    border-color: #8FB8DE;
+}
+
+.movie-synopsis {
+    color: white;
+    font-size: 17px;
+    padding-top:1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom:1rem ;
+    text-align: end;
+    font-family: Rubik, sans-serif;
+
+}
