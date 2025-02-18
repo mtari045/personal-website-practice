@@ -1,14 +1,14 @@
 
-// get the modal
+// get modal
 var modal = document.getElementById('myModal');
 
-// get the photography icon
+// get photo icon
 var photographyIcon = document.getElementById('photography-icon');
 
-// get the <span> element that closes the modal
+// get <span> elem that closes modal
 var span = document.getElementsByClassName('close')[0];
 
-// open modal when the photography icon is clicked
+// open modal when the icon is clicked
 photographyIcon.onclick = function() {
   modal.style.display = 'block';
 }
